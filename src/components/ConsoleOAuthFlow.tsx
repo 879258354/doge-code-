@@ -522,11 +522,11 @@ function OAuthStatusMessage(t0) {
   switch (oauthStatus.state) {
     case "provider_select":
       {
-        return <Box flexDirection="column" gap={1} marginTop={1}><Text bold={true}>选择模型 API 格式</Text><Text>Claude Code 内部仍保持 Anthropic Messages 协议；如果你选择 OpenAI，这里会通过中间转接层把内部 Messages 请求转换成 Chat Completions 请求并把返回流再转回 Messages 事件。</Text><Box><Select options={[{
-          label: <Text>Anthropic API 格式 · <Text dimColor={true}>直接使用兼容 `/v1/messages` 的接口</Text></Text>,
+        return <Box flexDirection="column" gap={1} marginTop={1}><Text bold={true}>Select Model API Format</Text><Text>Claude Code internally maintains the Anthropic Messages protocol; if you select OpenAI, it will use an intermediate layer to convert internal Messages requests into Chat Completions requests and then convert the return stream back into Messages events.</Text><Box><Select options={[{
+          label: <Text>Anthropic-like API · <Text dimColor={true}>Use the interface compatible with `/v1/messages` directly.</Text></Text>,
           value: "anthropic"
         }, {
-          label: <Text>OpenAI API 格式 · <Text dimColor={true}>将 Anthropic Messages 转接为 Chat Completions</Text></Text>,
+          label: <Text>OpenAI-like API · <Text dimColor={true}>Convert Anthropic Messages to Chat Completions</Text></Text>,
           value: "openai"
         }]} onChange={value_0 => startCompatibleApiConfig(value_0 as CompatibleApiProvider)} /></Box></Box>;
       }
