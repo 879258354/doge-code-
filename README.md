@@ -144,18 +144,19 @@
 - Bun 1.3.5 或更高版本
 - Node.js 24 或更高版本
 - git clone 下载项目包
-- 安装bun
-curl -fsSL https://bun.sh/install | bash
-刷新变量：source ~/.bashrc
+- 安装依赖
+  sudo apt update && sudo apt install -y unzip curl
+安装curl -fsSL https://bun.sh/install | bash
+
+
+刷新变量：# 临时生效（当前终端）
+source ~/.bashrc
+
+# 永久生效（所有新终端）
+echo 'export BUN_INSTALL="$HOME/.bun"' >> ~/.bashrc
+echo 'export PATH="$BUN_INSTALL/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
 安装依赖：测试bun --version
-
-```bash
-bun install
-```
-
-## 快速安装（推荐开发者直接源码使用）
-
-如果你是直接拉这个仓库源码来用，最快的方式是用 [`bun link`](README.md) 把它注册成全局命令。
 
 ### 方式一：源码目录内直接注册
 
