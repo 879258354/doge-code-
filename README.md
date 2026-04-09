@@ -143,8 +143,11 @@
 
 - Bun 1.3.5 或更高版本
 - Node.js 24 或更高版本
-
-安装依赖：
+- git clone 下载项目包
+- 安装bun
+curl -fsSL https://bun.sh/install | bash
+刷新变量：source ~/.bashrc
+安装依赖：测试bun --version
 
 ```bash
 bun install
